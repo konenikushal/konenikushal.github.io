@@ -1,0 +1,25 @@
+body {
+    background-color: rgb(191, 132, 169);
+  }
+  
+  h1 {
+    color: white;
+    text-align: center;
+  }
+  
+  p {
+    font-family: verdana;
+    font-size: 20px;
+  }
+
+  a {
+    color:rgb(55, 11, 11)
+  }
+  
+  figure {
+    text-align: center;
+  }
+
+  figcaption {
+    font-style: italic;
+  }
