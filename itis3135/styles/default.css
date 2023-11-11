@@ -53,3 +53,34 @@ body {
       background-color: #666;
       color: white;
   }
+  
+  input, select {
+  background-color: #bb9696;
+  color: #fff;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #471111;
+  border-radius: 4px;
+  font-family: 'Verdana', sans-serif;
+  display: block;
+  width: 95%;
+  box-sizing: border-box;
+  }
+
+  input[type="submit"], input[type="reset"] {
+    background-color: #333;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  input[type="checkbox"], input[type="radio"] {
+    width: auto;
+    margin-right: 10px;
+  }
+
+  label {
+    font-weight: bold;
+    margin-top: 15px;
+    color: #ffffff;
+    text-align: left;
+  }
