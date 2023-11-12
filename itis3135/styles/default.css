@@ -1,86 +1,90 @@
 body {
-    background-color: rgb(191, 132, 169);
-  }
-  
-  h1 {
-    color: white;
-    text-align: center;
-  }
-  
-  p {
-    font-family: verdana;
-    font-size: 20px;
-  }
+  background-color: rgb(191, 132, 169);
+}
 
-  a {
-    color:rgb(55, 11, 11)
-  }
-  
-  figure {
-    text-align: center;
-    margin: auto;
-  }
+h1 {
+  color: white;
+  text-align: center;
+}
 
-  figcaption {
-    font-style: italic;
-    margin-bottom: 15px;
-  }
+p {
+  font-family: verdana;
+  font-size: 20px;
+}
 
-  table {
-    margin: auto;
-    margin-bottom: 20px;
-  }
+a {
+  color: white;
+  text-decoration: none;
+}
 
-  table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-  }
-  th, td {
-    padding: 8px;
-    text-align: left;
-  }
-  table th {
-      background-color: #333;
-      color: white;
-  }
-  table tr:nth-child(even) {
-      background-color: #f2f2f2;
-  }
-  table tr:nth-child(odd) {
-      background-color: #ddd;
-  }
-  table tr:last-child th {
-      background-color: #666;
-      color: white;
-  }
-  
-  input, select {
+a:hover {
+  text-decoration: underline;
+}
+
+figure {
+  text-align: center;
+  margin: auto;
+}
+
+figcaption {
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+table {
+  margin: auto;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+
+table th {
+  background-color: #333;
+  color: white;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table tr:nth-child(odd) {
+  background-color: #ddd;
+}
+
+table:last-of-type {
+  margin-bottom: 10px;
+}
+
+input, select {
   background-color: #bb9696;
   color: #fff;
   padding: 5px;
-  margin-bottom: 10px;
   border: 1px solid #471111;
   border-radius: 4px;
   font-family: 'Verdana', sans-serif;
   display: block;
   width: 95%;
-  box-sizing: border-box;
-  }
+  margin-bottom: 10px;
+}
 
-  input[type="submit"], input[type="reset"] {
-    background-color: #333;
-    cursor: pointer;
-    font-size: 16px;
-  }
+input[type="submit"], input[type="reset"] {
+  background-color: #333;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
 
-  input[type="checkbox"], input[type="radio"] {
-    width: auto;
-    margin-right: 10px;
-  }
+input[type="checkbox"], input[type="radio"] {
+  width: auto;
+  margin-right: 10px;
+}
 
-  label {
-    font-weight: bold;
-    margin-top: 15px;
-    color: #ffffff;
-    text-align: left;
-  }
+label {
+  font-weight: bold;
+  color: #ffffff;
+  text-align: left;
+}
