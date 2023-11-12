@@ -1,14 +1,14 @@
 body {
   background-color: rgb(191, 132, 169);
+  font-family: 'Franklin Gothic', Arial, sans-serif;
 }
 
 h1 {
-  color: white;
+  color: rgb(68, 26, 26);
   text-align: center;
 }
 
 p {
-  font-family: verdana;
   font-size: 20px;
 }
 
@@ -87,4 +87,12 @@ label {
   font-weight: bold;
   color: #ffffff;
   text-align: left;
+}
+
+header {
+  text-align: center;
+}
+
+footer {
+  text-align: center;
 }
