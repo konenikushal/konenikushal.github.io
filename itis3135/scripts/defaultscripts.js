@@ -61,21 +61,22 @@ function displayPolygonName(number) {
     const yankeeTicketsButton = document.getElementById('yankeeTicketsButton');
 
     quoteButton.addEventListener('click', function() {
-        alert('You clicked the QUOTE button!');
+        alert('YANKEE YOG once said "BULLET TRAIN IS THE BEST FILM"');
     });
 
     couponButton.addEventListener('click', function() {
-        alert('You clicked the 10% off Coupon button!');
+        alert('Buy 50 of our brimless hats and get a 10% off Coupon!');
     });
 
     brimlessButton.addEventListener('click', function() {
-        alert('You clicked the brimless button!');
+        window.location.href = 'https://nobrimco.com/';    
     });
 
     yankeeYogButton.addEventListener('click', function() {
-        alert('You clicked the Yankee Yog button!');
+        const circumference = prompt("Enter enter you head size:");
+        alert("Your head is too big");    
     });
 
     yankeeTicketsButton.addEventListener('click', function() {
-        alert('You clicked the Yankee Tickets button!');
+        alert('See YANKEE YOG in all his glory on November 31st');
     });
