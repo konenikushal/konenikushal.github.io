@@ -1,16 +1,22 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     displayCurrentDateTime();
 
-    document.getElementById('nameMoodForm').addEventListener('submit', function(event) {
+    const nameMoodForm = document.getElementById('nameMoodForm');
+    const favNumberForm = document.getElementById('favNumberForm');
+
+    nameMoodForm.addEventListener('submit', function (event) {
         event.preventDefault();
-        const userName = document.getElementById('name').value;
-        const userMood = document.getElementById('mood').value;
+        const userNameInput = document.getElementById('name');
+        const userMoodInput = document.getElementById('mood');
+        const userName = userNameInput.value;
+        const userMood = userMoodInput.value;
         displayGreeting(userName, userMood);
     });
 
-    document.getElementById('favNumberForm').addEventListener('submit', function(event) {
+    favNumberForm.addEventListener('submit', function (event) {
         event.preventDefault();
-        const favoriteNumber = processFavoriteNumber(document.getElementById('favNumber').value);
+        const favNumberInput = document.getElementById('favNumber');
+        const favoriteNumber = processFavoriteNumber(favNumberInput.value);
         if (favoriteNumber !== null) {
             displayPolygonName(favoriteNumber);
         }
@@ -19,20 +25,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function displayCurrentDateTime() {
     const now = new Date();
-    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+    const options = {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+    };
     const dateTimeString = `Today is ${now.toLocaleDateString('en-US', options)}`;
-    document.getElementById('currentDateTime').textContent = dateTimeString;
+    const currentDateTimeElement = document.getElementById('currentDateTime');
+    currentDateTimeElement.textContent = dateTimeString;
 }
 
-function displayGreeting(name, mood) {
+function displayGreeting(userName, userMood) {
     const greetingDiv = document.getElementById('greeting');
-    greetingDiv.innerHTML = `<p>Kushalyuh welcomes you, ${name}!<br>We're glad you are doing ${mood}!</p>`;
+    greetingDiv.innerHTML = `<p>Kushalyuh welcomes you, ${userName}!<br>We're glad you are doing ${userMood}!</p>`;
 }
 
 function processFavoriteNumber(number) {
-    let num = Math.abs(parseFloat(number));
-    num = Math.round(num);
-    return num;
+    let positiveNumber = Math.abs(parseFloat(number));
+    let roundedNumber = Math.round(positiveNumber);
+    return roundedNumber;
 }
 
 function displayPolygonName(number) {
@@ -51,32 +65,35 @@ function displayPolygonName(number) {
     };
 
     let polygonName = polygonNames[number] || "polygon with more than 10 sides";
-    document.getElementById('polygonName').innerHTML = `<p>${polygonName}</p>`;
+    const polygonNameElement = document.getElementById('polygonName');
+    polygonNameElement.innerHTML = `<p>${polygonName}</p>`;
 }
 
-    const quoteButton = document.getElementById('quoteButton');
-    const couponButton = document.getElementById('couponButton');
-    const brimlessButton = document.getElementById('brimlessButton');
-    const yankeeYogButton = document.getElementById('yankeeYogButton');
-    const yankeeTicketsButton = document.getElementById('yankeeTicketsButton');
+const quoteButton = document.getElementById('quoteButton');
+const couponButton = document.getElementById('couponButton');
+const brimlessButton = document.getElementById('brimlessButton');
+const yankeeYogButton = document.getElementById('yankeeYogButton');
+const yankeeTicketsButton = document.getElementById('yankeeTicketsButton');
 
-    quoteButton.addEventListener('click', function() {
-        alert('YANKEE YOG once said "BULLET TRAIN IS THE BEST FILM"');
-    });
+quoteButton.addEventListener('click', function () {
+    alert('YANKEE YOG once said "BULLET TRAIN IS THE BEST FILM"');
+});
 
-    couponButton.addEventListener('click', function() {
-        alert('Buy 50 of our brimless hats and get a 10% off Coupon!');
-    });
+couponButton.addEventListener('click', function () {
+    alert('Buy 50 of our brimless hats and get a 10% off Coupon!');
+});
 
-    brimlessButton.addEventListener('click', function() {
-        window.location.href = 'https://nobrimco.com/';    
-    });
+brimlessButton.addEventListener('click', function () {
+    window.location.href = 'https://nobrimco.com/';
+});
 
-    yankeeYogButton.addEventListener('click', function() {
-        const circumference = prompt("Enter enter you head size:");
-        alert("Your head is too big");    
-    });
+yankeeYogButton.addEventListener('click', function () {
+    const circumference = prompt("Enter your head size:");
+    if (circumference) {
+        alert("Your head is too big");
+    }
+});
 
-    yankeeTicketsButton.addEventListener('click', function() {
-        alert('See YANKEE YOG in all his glory on November 31st');
-    });
+yankeeTicketsButton.addEventListener('click', function () {
+    alert('See YANKEE YOG in all his glory on November 30th');
+});
