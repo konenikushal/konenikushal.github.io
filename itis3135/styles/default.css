@@ -117,3 +117,14 @@ button {
 button:hover {
   background-color: darkred;
 }
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox {
+  margin-right: 4px;
+  display: inline-block;
+  width: auto;
+}
