@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> KUSHAL KONENI || ITIS 3135 BYO-INTRO PAGE</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="scripts/survey.js" defer></script>
+</head>
+<body>
+    <header data-include="components/header.html"></header>
+    <main style="text-align: left; padding-left: 20px;">
+        <h2>KUSHAL KONENI || ITIS 3135 BYO-INTRO PAGE</h2>
+
+        <form id="introForm" action="/submit-form" method="post" enctype="multipart/form-data">
+            
+            <h3> Time to BYO Intro page, please fill out the form below so we can create your own page</h3>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="John Doe" required>
+    
+            <label for="mascot">Mascot:</label>
+            <input type="text" id="mascot" name="mascot" value="King Crab" required>
+    
+            <label>Add your image</label>
+            <input type="file" name="file" id="introImage" required>
+            <div id="loadImage"></div>
+
+            <label for="imageCaption">Image Caption:</label>
+            <input type="text" id="imageCaption" name="imageCaption" value="sitting next to a bamboo plant in the kitchen" required>
+    
+            <label for="personalBackground">Personal Background:</label>
+            <input type="text" id="personalBackground" name="personalBackground" value="I am from North Carolina and have a passion for infrastructure. This would be my final year as an undergrad studying computer science as I aim to graduate in May of 2024. I hope to use the skills I learn at Charlotte immediately after I graduate and for a long time as I develop them further." required>
+    
+            <label for="professionalBackground">Professional Background:</label>
+            <input type="text" id="professionalBackground" name="professionalBackground" value="During the summer of 2023 I joined a 2023 Summer Intern: Associate Software Engineer for Charter Spectrum. I had the opportunity to work multiple areas including Front End, Back End, and Database alongside experienced individuals who helped me gain eye opening insight into this industry." required>
+    
+            <label for="academicBackground">Academic Background:</label>
+            <input type="text" id="academicBackground" name="academicBackground" value="I am a transfer student studying here at UNC Charlotte. I obtained my Associates in Science degree and am now working towards my Bachelor of Science in Computer Science with Concentration: Software Engineering." required>
+    
+            <label for="webDevBackground">Background in Web Development:</label>
+            <input type="text" id="webDevBackground" name="webDevBackground" value="I have a stable background in this subject as it's been evolving rapidly in the past few years, but I have a long way to go in terms of mastering these concepts." required>
+    
+            <label for="primaryPlatform">Primary Computer Platform:</label>
+            <input type="text" id="primaryPlatform" name="primaryPlatform" value="Windows 10 (may upgrade to 11)" required>
+    
+            <label for="courses">Courses currently taking:</label>
+            <div id="coursesContainer"></div>
+
+            <button type="button" id="addCourseButton">Add Course</button><br>
+    
+            <label for="funnyThing">Funny thing?</label>
+            <input type="text" id="funnyThing" name="funnyThing" value="I hate bell peppers and I gag when I am near them." >
+    
+            <label for="anythingElse">Anything else?</label>
+            <input type="text" id="anythingElse" name="anythingElse" value="I hope to have an engaging semester!" >
+    
+            <input type="checkbox" id="agreement" name="agreement" required>
+            <label for="agreement">I understand that what is on this page is not password protected and I will not put anything here that I don’t want publicly available.</label><br>
+    
+            <input type="submit" value="Submit">
+            <input type="reset" id="resetButton" value="Reset">
+
+        </form>
+
+        <div id="imageDisplay"></div>
+        <div id="formDataDisplay" style="display: none;"></div>
+        <button id="backToFormButton" style="display: none;">Back to Form</button>
+
+    </main>
+    <footer data-include="components/footer.html"></footer>
+    <script src="scripts/HTMLInclude.js"></script>
+</body>
+</html>
