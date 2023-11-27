@@ -65,7 +65,7 @@ input, select {
   padding: 5px;
   border: 1px solid #471111;
   border-radius: 4px;
-  font-family: 'Verdana', sans-serif;
+  font-family: 'Franklin Gothic', Arial, sans-serif;
   display: block;
   width: 95%;
   margin-bottom: 10px;
@@ -109,7 +109,7 @@ button {
   margin: 5px;
   background-color: rgb(76, 97, 137);
   color: white;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: 'Franklin Gothic', Arial, sans-serif;
   padding: 10px 20px;
   cursor: pointer;
 }
