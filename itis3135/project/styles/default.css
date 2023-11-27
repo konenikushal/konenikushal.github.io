@@ -56,3 +56,9 @@ header {
   a:hover {
     text-decoration: underline;
   }
+
+  hr {
+    border: none;
+    height: 5px;
+    background-color: #008020;
+}
