@@ -52,3 +52,7 @@ header {
     color: rgb(151, 23, 89);
     text-align: center;
   }
+
+  a:hover {
+    text-decoration: underline;
+  }
