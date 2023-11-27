@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(120, 196, 177);
+    background-color: rgb(136, 178, 141);
 
     font-family: 'Franklin Gothic', sans-serif;
 }
@@ -27,7 +27,7 @@ body {
     background-color: #f2f2f2;
     color: rgb(151, 23, 89);
     text-decoration: none;
-    border: 3px solid #008020;
+    border: 3px solid #000000;
     border-radius: 10px;
 }
 
@@ -60,5 +60,5 @@ header {
   hr {
     border: none;
     height: 5px;
-    background-color: #008020;
+    background-color: rgb(151, 23, 89);
 }
