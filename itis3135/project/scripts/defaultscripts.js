@@ -14,3 +14,15 @@ $(document).ready(function() {
 $("[data-fancybox]").fancybox({
     // options
 });
+
+$(document).ready(function() {
+    $('#openLightbox').click(function() {
+        $('#lightbox').fadeIn();
+        $('#videoContainer').html('<iframe width="560" height="315" src="https://www.youtube.com/embed/MhKOxFjF2nI" frameborder="0" allowfullscreen></iframe>');
+    });
+
+    $('#closeBtn').click(function() {
+        $('#lightbox').fadeOut();
+        $('#videoContainer').empty();
+    });
+});

@@ -9,9 +9,28 @@
 <body>
     <header data-include="components\header.html"></header>
     <main style="text-align: left; padding-left: 20px;">
-        
+    <h2>Featured</h2>
+        <div class="container">
+            <div class="column" id="column1">
+                latest release
+            </div>
+            <div class="column" id="column2">
+
+                <button id="openLightbox">Watch Video</button>
+
+                <!-- Lightbox container -->
+                <div id="lightbox" style="display:none;">
+                    <div id="videoContainer">
+                        <!-- The YouTube video will be loaded here -->
+                    </div>
+                    <button id="closeBtn">Close</button>
+                </div>
+
+            </div>
+        </div>
     </main>
     <footer data-include="components/footer.html"></footer>
     <script src="scripts/HTMLInclude.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
 </html>
