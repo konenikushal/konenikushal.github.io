@@ -5,11 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Works - Jacob's Vocaloid Showcase</title>
     <link rel="stylesheet" href="styles/default.css">
+    <script src="scripts/worksds.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <header data-include="components\header.html"></header>
     <main style="text-align: left; padding-left: 20px;">
         
+        <div class="container">
+        <h2>Header 1</h2>
+        <button class="toggle-button" onclick="toggleParagraph(1)">Toggle</button>
+        </div>
+        
+        <p class="paragraph" id="paragraph1" style="display: none;">rwar</p>
+    
+        <div class="container">
+        <h2>Header 2</h2>
+        <button class="toggle-button" onclick="toggleParagraph(2)">Toggle</button>
+        </div>
+        
+        <p class="paragraph" id="paragraph2" style="display: none;">rwar</p>
+    
     </main>
     <footer data-include="components/footer.html"></footer>
     <script src="scripts/HTMLInclude.js"></script>

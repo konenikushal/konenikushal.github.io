@@ -5,32 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOME - Jacob's Vocaloid Showcase</title>
     <link rel="stylesheet" href="styles/default.css">
+    <script src="scripts/indexds.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <header data-include="components\header.html"></header>
     <main style="text-align: left; padding-left: 20px;">
     <h2>Featured</h2>
-        <div class="container">
-            <div class="column" id="column1">
-                latest release
-            </div>
-            <div class="column" id="column2">
+    
+    <button id="lightboxTrigger">From the Start</button>
 
-                <button id="openLightbox">Watch Video</button>
-
-                <!-- Lightbox container -->
-                <div id="lightbox" style="display:none;">
-                    <div id="videoContainer">
-                        <!-- The YouTube video will be loaded here -->
-                    </div>
-                    <button id="closeBtn">Close</button>
-                </div>
-
-            </div>
+    <div id="lightbox" style="display:none;">
+        <div id="lightboxContent">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/MhKOxFjF2nI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
+    </div>
+
+    <div id="example">RWAR</div>
+
     </main>
     <footer data-include="components/footer.html"></footer>
     <script src="scripts/HTMLInclude.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
 </html>
