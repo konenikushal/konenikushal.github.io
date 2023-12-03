@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> KUSHAL KONENI || ITIS 3135 Arrays</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="scripts/arrays.js" defer></script>
+</head>
+<body>
+    <header data-include="components/header.html"></header>
+    <main style="text-align: left; padding-left: 20px;">
+        <h2>KUSHAL KONENI || ITIS 3135 Arrays</h2>
+        <div>
+            <label for="employeeDropdown">Select Employee: </label>
+            <select id="employeeDropdown">
+                <option value="Alice">Alice</option>
+                <option value="Bob">Bob</option>
+                <option value="Charlie">Charlie</option>
+                <option value="Diana">Diana</option>
+                <option value="Ethan">Ethan</option>
+                <option value="Fiona">Fiona</option>
+            </select>
+        </div>
+        
+        <div>
+            <label for="salaryInput">Salary: </label>
+            <input type="number" id="salaryInput">
+            <button onclick="addSalary()">Add Salary</button>
+        </div>
+    
+        <button onclick="displayResults()">Display Results</button>
+        <button onclick="displaySalary()">Display Salaries</button>
+    
+        <div id="results"></div>
+        <div id="results_table"></div>
+
+    </main>
+    <footer data-include="components/footer.html"></footer>
+    <script src="scripts/HTMLInclude.js"></script>
+</body>
+</html>

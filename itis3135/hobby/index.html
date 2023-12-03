@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> kushalyuh</title>
+    <style>
+        body {
+            background-color: rgb(144, 159, 201);
+            font-family: 'Franklin Gothic', Arial, sans-serif;
+        }
+        
+        h1 {
+            color: rgb(68, 26, 26);
+            text-align: center;
+        }
+        
+        p {
+            font-size: 20px;
+        }
+
+        a {
+            color: rgb(55, 11, 11);
+        }
+        
+        figure {
+            text-align: center;
+        }
+
+        figcaption {
+            font-style: italic;
+        }
+
+        header {
+        text-align: center;
+        }
+
+        footer {
+        text-align: center;
+        }
+        
+        .header-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        }
+
+        .header-image {
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
+        }
+
+        a {
+        color: white;
+        text-decoration: none;
+        }
+
+        a:hover {
+        text-decoration: underline;
+        }
+
+        .navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        }
+
+        .navbar li {
+        display: inline;
+        }
+
+        .navbar a {
+        display: inline-block;
+        margin: 5px;
+        padding: 8px;
+        background-color: #f2f2f2;
+        color: rgb(68, 26, 26);
+        text-decoration: none;
+        border: 3px solid #000000;
+        border-radius: 10px;
+        }
+
+        .navbar a:hover {
+        background-color: #ddd;
+        }
+
+    </style>   
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1> KUSHALYUH</h1>
+            <nav class="navbar">
+                <a href="#home" onclick="showDiv('home')">Home</a>
+                <a href="#journey" onclick="showDiv('journey')">Journey</a>
+                <a href="#works" onclick="showDiv('works')">Works</a>
+                <a href="#contact" onclick="showDiv('contact')">Contact</a>
+                <a href="#fan_interaction" onclick="showDiv('fan_interaction')">Fan Interaction</a>
+            </nav>
+        </div>
+    </header>
+    <main style="text-align: left; padding-left: 20px;">
+        <section id="home" class="content" style="display: none;">
+            <h2>Home</h2>
+            <h3>
+                <p>hi</p>
+                <p>hi</p>
+                <img src="images/yog.png"300" height="300">
+                <figcaption>YOG</figcaption>
+            </h3>
+        </section>
+        <section id="journey" class="content" style="display: none;">
+            Journey Contejhgjhgjhgjhgnt
+        </section>
+        <section id="works" class="content" style="display: none;">
+            Works Content
+        </section>
+        <section id="contact" class="content" style="display: none;">
+            Contact Content
+        </section>
+        <section id="fan_interaction" class="content" style="display: none;">
+            Fan Interaction Content
+        </section>
+
+    </main>
+    <footer>
+        <p>Designed by <a href="https://webpages.charlotte.edu/kkoneni/itis3135/kushalyuh.com/" target="_blank">kushalyuh</a> &copy; 2023</p>
+        <a id ="validation_link_html" href="">
+            <img style="border:0;width:88px;height:31px" src="https://upload.wikimedia.org/wikipedia/commons/b/bb/W3C_HTML5_certified.png" alt="Valid HTML!">
+        </a>
+    
+        <a id ="validation_link_css" href="">
+            <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
+        </a>
+    
+        <script>
+            function showDiv(sectionId) {
+                document.querySelectorAll('.content').forEach(sec => sec.style.display = 'none');
+                const selectedSection = document.getElementById(sectionId);
+                if (selectedSection) selectedSection.style.display = 'block';
+            }
+
+            showDiv('home');
+            
+            document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+            document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+        </script>
+
+    </footer>
+</body>
+</html>
