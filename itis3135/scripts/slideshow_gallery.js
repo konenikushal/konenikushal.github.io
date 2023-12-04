@@ -1,8 +1,18 @@
 $(document).ready(function(){
     var slideIndex = 1;
     var images = [
-        { src: "images/goy.png", caption: "Caption Text 1" },
-        { src: "images/pic1.png", caption: "Caption Text 2" },
+        { src: "images/kooky.png", caption: "K - for Kooky" },
+        { src: "images/urban.png", caption: "U - for Urban" },
+        { src: "images/showcase.png", caption: "S - for Showcase" },
+        { src: "images/haphazard.png", caption: "H - for Haphazard" },
+        { src: "images/urban.png", caption: "A - for Urban" },
+        { src: "images/luxurious.png", caption: "L - for Luxurious" },
+        { src: "images/kirei.png", caption: "K - for Kirei" },
+        { src: "images/ornate.png", caption: "O - for Ornate" },
+        { src: "images/nationalistic.png", caption: "N - for Nationalistic" },
+        { src: "images/echoes.png", caption: "E - for Echoes" },
+        { src: "images/network.png", caption: "N - for Network" },
+        { src: "images/inspector.png", caption: "I - for Inspector" },
     ];
 
     function setupSlideshow() {
