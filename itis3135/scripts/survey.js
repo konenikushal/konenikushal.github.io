@@ -31,7 +31,7 @@ document.getElementById('introForm').addEventListener('submit', function(event) 
         academicBackground: document.getElementById('academicBackground').value,
         webDevBackground: document.getElementById('webDevBackground').value,
         primaryPlatform: document.getElementById('primaryPlatform').value,
-        courses: [...document.getElementById('coursesContainer').querySelectorAll('input[name="course"]')].map(input => input.value),
+        courses: [...document.getElementById('coursesContainer').querySelectorAll(' input[name="course"]')].map(input => input.value),
         funnyThing: document.getElementById('funnyThing').value,
         anythingElse: document.getElementById('anythingElse').value
     };
@@ -64,8 +64,14 @@ function displayFormData(data) {
     displayDiv.innerHTML = '';
 
     for (var key in data) {
+        var value = data[key];
+
+        if (key === 'courses' && Array.isArray(value)) {
+            value = value.join(', ');
+        }
+
         var p = document.createElement('p');
-        p.textContent = key + ": " + data[key];
+        p.textContent = key + ": " + value;
         displayDiv.appendChild(p);
     }
 
@@ -117,3 +123,10 @@ function addCourseField() {
     courseDiv.appendChild(deleteButton);
     coursesContainer.appendChild(courseDiv);
 }
+
+document.getElementById('introForm').addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+        event.preventDefault(); // Prevent default action
+        return false; // Stop the event from propagating
+    }
+});
