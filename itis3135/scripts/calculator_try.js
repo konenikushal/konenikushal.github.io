@@ -52,12 +52,11 @@ function calculate() {
         operation += currentInput;
         let result = Function("return " + operation)();
         document.getElementById('display').value = result;
-        currentInput = result.toString();
-        operation = '';
+        operation = result.toString();
+        currentInput = '';
         lastOperator = '';
     }
 }
-
 
 function clearDisplay() {
     operation = '';
