@@ -167,6 +167,7 @@ button:hover {
 #keys {
   display: grid;
   grid-template-columns: repeat(4, 60px);
+  grid-template-columns: repeat(4, 1fr);
   justify-content: center;
 }
 
@@ -181,26 +182,21 @@ div {
 }
 
 @media (min-width: 576px) {
-  body {
-    margin: 10px;
-  }
+body {
+  margin: 10px;
+}}
 
-  #keys {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  p, label, table th, table td {
-    font-size: 18px;
-  }
+p, label, table th, table td {
+  font-size: 18px;
+}
 
   figure, table, input, select {
-    width: 100%;
-    max-width: 540px;
-    margin: auto;
-  }
+  width: 100%;
+  max-width: 540px;
+  margin: auto;
+}
 
-  img {
-    max-width: 100%;
-    height: auto;
-  }
+img {
+  max-width: 100%;
+  height: auto;
 }
