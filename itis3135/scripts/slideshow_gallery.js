@@ -5,7 +5,7 @@ $(document).ready(function(){
         { src: "images/urban.png", caption: "U - for Urban" },
         { src: "images/showcase.png", caption: "S - for Showcase" },
         { src: "images/haphazard.png", caption: "H - for Haphazard" },
-        { src: "images/urban.png", caption: "A - for Urban" },
+        { src: "images/astonishing.png", caption: "A - for Astonishing" },
         { src: "images/luxurious.png", caption: "L - for Luxurious" },
         { src: "images/kirei.png", caption: "K - for Kirei" },
         { src: "images/ornate.png", caption: "O - for Ornate" },
