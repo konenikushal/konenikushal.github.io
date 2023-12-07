@@ -11,17 +11,37 @@
 <body>
     <header data-include="components\header.html"></header>
     <main style="text-align: left; padding-left: 20px;">
-    <h2>Featured</h2>
-    
-    <button id="lightboxTrigger">From the Start</button>
+        <h2>Featured</h2>
+        
+        <!-- Column container -->
+        <div class="column-container">
+            <!-- Column 1 -->
+            
+            <div class="column">
+                <div class="content-section">
+                    <h3>Title Goes Here</h3>
+                    <img src="images/yt1.png" alt="Descriptive Alt Text">
+                    <p class="index-para">Your descriptive paragraph goes here. This text can give more information about the content or purpose of the section.</p>
+                </div>
 
-    <div id="lightbox" style="display:none;">
-        <div id="lightboxContent">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/MhKOxFjF2nI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                
+                <button id="lightboxTrigger">From the Start</button>
+                <div id="lightbox" style="display:none;">
+                    <div id="lightboxContent">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/MhKOxFjF2nI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="column">
+                <div class="content-section">
+                    <h3>Title Goes Here</h3>
+                    <img src="images/yt1.png" alt="Descriptive Alt Text">
+                    <p class="index-para">Your descriptive paragraph goes here. This text can give more information about the content or purpose of the section.</p>
+                </div><!-- Content for column 2 here -->
+            </div>
         </div>
-    </div>
-
-    <div id="example">RWAR</div>
 
     </main>
     <footer data-include="components/footer.html"></footer>

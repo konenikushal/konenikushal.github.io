@@ -1,8 +1,8 @@
 function toggleParagraph(index) {
-    const paragraph = document.getElementById(`paragraph${index}`);
-    const isVisible = paragraph.style.display === 'block';
+    const contentContainer = document.getElementById(`contentContainer${index}`);
+    const isVisible = contentContainer.style.display === 'block';
 
-    paragraph.style.display = isVisible ? 'none' : 'block';
+    contentContainer.style.display = isVisible ? 'none' : 'block';
 
     if (index === 1) {
         makeAjaxRequest1(index, !isVisible);
@@ -10,6 +10,7 @@ function toggleParagraph(index) {
         makeAjaxRequest2(index, !isVisible);
     }
 }
+
 
 function makeAjaxRequest1(index, isVisible) {
     $.ajax({

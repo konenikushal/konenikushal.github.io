@@ -10,21 +10,36 @@
 </head>
 <body>
     <header data-include="components\header.html"></header>
-    <main style="text-align: left; padding-left: 20px;">
-        
+    <main style="text-align: left; padding-left: 20px; padding-right: 20px">
+    
         <div class="container">
         <h2>Header 1</h2>
         <button class="toggle-button" onclick="toggleParagraph(1)">Toggle</button>
         </div>
         
-        <p class="paragraph" id="paragraph1" style="display: none;">rwar</p>
+        <div id="contentContainer1" class="content-container" style="display: none;">
+            <p>rwar</p>
+            <p>More text here...</p>
+            <img src="path-to-your-image.jpg" alt="Descriptive Alt Text">
+            <!-- Add more content as needed -->
+        </div>
     
         <div class="container">
-        <h2>Header 2</h2>
-        <button class="toggle-button" onclick="toggleParagraph(2)">Toggle</button>
+            <h2>Header 2</h2>
+            <button class="toggle-button" onclick="toggleParagraph(2)">Toggle</button>
+        </div>
+                
+        <div id="contentContainer2" class="content-container" style="display: none;">
+            <div class="inner-content">
+                <a href="https://on.soundcloud.com/vpD1a"><h3>TIMELESS → CLICK HERE TO EXPERIENCE</h3></a>
+                <img src="images/timeless.png" alt="Descriptive Alt Text">
+            </div>
+            <div class="inner-content">
+                <h3>Timeless</h3>
+                <img src="images/timeless.png" alt="Descriptive Alt Text">
+            </div>
         </div>
         
-        <p class="paragraph" id="paragraph2" style="display: none;">rwar</p>
     
     </main>
     <footer data-include="components/footer.html"></footer>
