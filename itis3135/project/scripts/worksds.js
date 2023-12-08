@@ -24,7 +24,7 @@ function makeAjaxRequest1(index, isVisible) {
             console.error("Error in AJAX request: ", status, error);
         }
     });
-    alert("AJAX request made");
+    alert("AJAX request 1 made");
 }
 
 function makeAjaxRequest2(index, isVisible) {
@@ -39,7 +39,7 @@ function makeAjaxRequest2(index, isVisible) {
             console.error("Error in AJAX request: ", status, error);
         }
     });
-    alert("AJAX request made");
+    alert("AJAX request 2 made");
 }
 
 function toggleImage1(button) {
