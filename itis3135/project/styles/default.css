@@ -249,3 +249,23 @@ iframe {
 .column:last-child {
   border-right: none; /* Removes border from the last column */
 }
+.container-border {
+  width: 100%; /* Full width */
+  box-sizing: border-box; /* Include padding and border in the box's size */
+  border: 2px solid black; /* Border */
+  margin-bottom: 10px; /* Space below the container */
+  padding: 15px; /* Padding between content and border */
+}
+
+.top-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content-container {
+  /* Styles for your expandable content */
+  width: 100%; /* Ensures it takes full width */
+  /* If additional padding is needed inside this container, you can add it here */
+}
+
