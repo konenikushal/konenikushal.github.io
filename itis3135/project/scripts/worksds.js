@@ -41,3 +41,25 @@ function makeAjaxRequest2(index, isVisible) {
     });
     alert("AJAX request made");
 }
+
+function toggleImage1(button) {
+    var img = button.getElementsByTagName('img')[0];
+    if (img.src.endsWith('plus.png')) {
+        img.src = 'images/minus.png';
+        toggleParagraph(1); // Collapsing the paragraph
+    } else {
+        img.src = 'images/plus.png';
+        toggleParagraph(1); // Expanding the paragraph
+    }
+}
+
+function toggleImage2(button) {
+    var img = button.getElementsByTagName('img')[0];
+    if (img.src.endsWith('plus.png')) {
+        img.src = 'images/minus.png';
+        toggleParagraph(2); // Collapsing the paragraph
+    } else {
+        img.src = 'images/plus.png';
+        toggleParagraph(2); // Expanding the paragraph
+    }
+}

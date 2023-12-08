@@ -174,10 +174,10 @@ header {
 }
 
 .toggle-button {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  cursor: pointer;
+  background-color: transparent; /* Set background to transparent */
+  color: #fff;                   /* Text color */
+  border: none;                  /* No border */
+  cursor: pointer;               /* Cursor changes to pointer on hover */
 }
 
 .paragraph {
