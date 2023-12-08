@@ -94,8 +94,26 @@ header {
   flex: 1; /* Allows it to grow if needed, ensures it stays on the right */
 }
 
+#contentContainer1 .inner-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Aligns items to the start */
+}
 
-.content-container h3,
+#contentContainer1 .inner-content .text-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Allows text content to take up available space */
+}
+
+#contentContainer1 .inner-content img {
+  width: auto;
+  max-width: 50%;
+  flex: 1;
+  padding-left: 20px; /* Adds padding to the left of the image */
+}
+
+
 .content-container img {
     width: 100%; /* Ensure each element takes the full width */
     display: block; /* Makes each element stack vertically */
@@ -147,14 +165,23 @@ header {
 
 
 #lightboxTrigger {
-  font-size: 20px; /* Increase font size */
-  padding: 15px 30px; /* Increase padding for a bigger button */
-  background-color: blue; /* Set button background to blue */
-  color: white; /* Set text color to white for better visibility */
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  font-size: 24px; /* Increase font size for better visibility */
+  padding: 20px 40px; /* Increase padding for a larger button */
+  background-color: rgb(136, 178, 141); /* Chrome-like color */
+  color: white; /* Change text color to black */
+  border: 6px solid #232323; /* Chrome-like border */
+  border-radius: 10px; /* Rounded corners */
+  cursor: pointer; /* Cursor change on hover */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Add a shadow for a 3D effect */
+  transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
 }
+
+#lightboxTrigger:hover {
+  background-color: #232323; /* Slightly darker shade for hover effect */
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.3); /* Increased shadow on hover for a popping effect */
+}
+
+
 
 
 
