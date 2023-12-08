@@ -110,6 +110,13 @@ header {
   padding-right: 100px;
 }
 
+.journey-para {
+  text-align: justify; /* Justifies the text of the paragraph */
+  padding-top: 150px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
 .column {
   flex: 1;
   display: flex;
