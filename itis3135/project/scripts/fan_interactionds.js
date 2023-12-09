@@ -153,7 +153,7 @@ $("#randomQuestionWidget").randomQuestionWidget({
 function makeAjaxRequest2() {
     $.ajax({
         type: 'POST',
-        url: 'server-script-2.php', //change
+        url: 'https://webpages.charlotte.edu/kkoneni/itis3135/project/scripts/fan_interaction.php', //change
         data: { 'action': 'randomQuestionClicked' },
         success: function(response) {
             console.log("AJAX response: ", response);
