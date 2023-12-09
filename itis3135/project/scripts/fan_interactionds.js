@@ -72,7 +72,7 @@ $("#randomSongWidget").randomSongWidget({
 function makeAjaxRequest1() {
     $.ajax({
         type: 'POST',
-        url: 'server-script-1.php', //change
+        url: 'https://webpages.charlotte.edu/kkoneni/itis3135/project/scripts/fan_interaction.php',
         data: { 'action': 'randomSongClicked' },
         success: function(response) {
             console.log("AJAX response: ", response);
@@ -81,15 +81,9 @@ function makeAjaxRequest1() {
             console.error("Error in AJAX request: ", status, error);
         }
     });
-    alert("AJAX request for Random Song made");
+    // Commented out the alert
+    // alert("AJAX request for Random Song made");
 }
-
-
-
-
-
-
-
 
 $.widget("custom.randomQuestionWidget", {
     options: {
@@ -149,11 +143,10 @@ $("#randomQuestionWidget").randomQuestionWidget({
     ]
 });
 
-
 function makeAjaxRequest2() {
     $.ajax({
         type: 'POST',
-        url: 'https://webpages.charlotte.edu/kkoneni/itis3135/project/scripts/fan_interaction.php', //change
+        url: 'https://webpages.charlotte.edu/kkoneni/itis3135/project/scripts/fan_interaction.php',
         data: { 'action': 'randomQuestionClicked' },
         success: function(response) {
             console.log("AJAX response: ", response);
@@ -162,5 +155,6 @@ function makeAjaxRequest2() {
             console.error("Error in AJAX request: ", status, error);
         }
     });
-    alert("AJAX request for Random Question made");
+    // Commented out the alert
+    // alert("AJAX request for Random Question made");
 }

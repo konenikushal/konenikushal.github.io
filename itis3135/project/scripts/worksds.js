@@ -11,11 +11,10 @@ function toggleParagraph(index) {
     }
 }
 
-
 function makeAjaxRequest1(index, isVisible) {
     $.ajax({
         type: 'POST',
-        url: 'server-script-1.php', //change
+        url: 'https://webpages.charlotte.edu/kkoneni/itis3135/project/scripts/workds.php',
         data: { 'paragraphIndex': index, 'isVisible': isVisible },
         success: function(response) {
             console.log("Response for paragraph " + index + ": ", response);
@@ -24,13 +23,14 @@ function makeAjaxRequest1(index, isVisible) {
             console.error("Error in AJAX request: ", status, error);
         }
     });
-    alert("AJAX request 1 made");
+    // Commented out the alert
+    // alert("AJAX request 1 made");
 }
 
 function makeAjaxRequest2(index, isVisible) {
     $.ajax({
         type: 'POST',
-        url: 'server-script-2.php', //change
+        url: 'https://webpages.charlotte.edu/kkoneni/itis3135/project/scripts/workds.php',
         data: { 'paragraphIndex': index, 'isVisible': isVisible },
         success: function(response) {
             console.log("Response for paragraph " + index + ": ", response);
@@ -39,7 +39,8 @@ function makeAjaxRequest2(index, isVisible) {
             console.error("Error in AJAX request: ", status, error);
         }
     });
-    alert("AJAX request 2 made");
+    // Commented out the alert
+    // alert("AJAX request 2 made");
 }
 
 function toggleImage1(button) {
