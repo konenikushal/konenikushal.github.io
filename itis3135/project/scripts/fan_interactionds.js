@@ -1,10 +1,23 @@
 $.widget("custom.randomSongWidget", {
     options: {
-        songs: []
+        songs: [],
+        renderItem: function(song) {
+            return `
+                <div class="song-item">
+                    <div class="song-title">
+                        <h3><a href="${song.url}" target="_blank">${song.name}</a></h3>
+                    </div>
+                    <div class="song-image">
+                        <img src="${song.photoPath}" alt="${song.name}">
+                    </div>
+                </div>
+            `;
+        }
+        
     },
 
     _create: function() {
-        this.button = $('<button id="randomSongButton">Get Random Song</button>')
+        this.button = $('<button id="randomSongButton">Random Song</button>')
             .appendTo(this.element)
             .button();
 
@@ -12,7 +25,10 @@ $.widget("custom.randomSongWidget", {
             .appendTo(this.element);
 
         this._on(this.button, {
-            click: "randomSong"
+            click: function() {
+                this.randomSong();
+                makeAjaxRequest1();
+            }
         });
     },
 
@@ -22,10 +38,9 @@ $.widget("custom.randomSongWidget", {
         }
         var randomIndex = Math.floor(Math.random() * this.options.songs.length);
         var song = this.options.songs[randomIndex];
-        this.songContent.html(
-            '<img src="' + song.photoPath + '" alt="Song Photo" id="songImage">' +
-            '<a href="' + song.url + '" target="_blank" id="randomSongLink">' + song.name + '</a>'
-        );
+        var songHTML = this.options.renderItem(song);
+        // Update the content of the new container instead of this.songContent
+        $("#newRandomSongContainer").html(songHTML);
     }
 });
 
@@ -53,3 +68,99 @@ $("#randomSongWidget").randomSongWidget({
         { name: "declan’s birthday! → CLICK HERE TO EXPERIENCE", url: "https://on.soundcloud.com/4udas", photoPath: "images/sc20.png" },
     ]
 });
+
+function makeAjaxRequest1() {
+    $.ajax({
+        type: 'POST',
+        url: 'server-script-1.php', //change
+        data: { 'action': 'randomSongClicked' },
+        success: function(response) {
+            console.log("AJAX response: ", response);
+        },
+        error: function(xhr, status, error) {
+            console.error("Error in AJAX request: ", status, error);
+        }
+    });
+    alert("AJAX request for Random Song made");
+}
+
+
+
+
+
+
+
+
+$.widget("custom.randomQuestionWidget", {
+    options: {
+        questions: [],
+        renderItem: function(question) {
+            return `
+                <div class="question-item">
+                    <div class="question-title">
+                        <h3>${question.name}</h3>
+                    </div>
+                    <div class="question-answer">
+                        <p>${question.answer}</p>
+                    </div>
+                </div>
+            `;
+        }
+    },
+
+    _create: function() {
+        this.button = $('<button id="randomQuestionButton">Random Question</button>')
+            .appendTo(this.element)
+            .button();
+
+        this._on(this.button, {
+            click: function() {
+                this.randomQuestion();
+                makeAjaxRequest2();
+            }
+        });
+    },
+
+    randomQuestion: function() {
+        if (this.options.questions.length === 0) {
+            return;
+        }
+        var randomIndex = Math.floor(Math.random() * this.options.questions.length);
+        var question = this.options.questions[randomIndex];
+        var questionHTML = this.options.renderItem(question);
+        $("#newRandomQuestionContainer").html(questionHTML); // Update this line to target #newRandomQuestionContainer
+    }
+});
+
+$("#randomQuestionWidget").randomQuestionWidget({
+    questions: [
+        {
+            name: "What is Jacob's favorite color?",
+            answer: "black"
+        },
+        {
+            name: "Which fruit does Jacob prefer the most?",
+            answer: "oranges"
+        },
+        {
+            name: "What is Jacob's favorite band?",
+            answer: "kings kaleidoscope"
+        }
+    ]
+});
+
+
+function makeAjaxRequest2() {
+    $.ajax({
+        type: 'POST',
+        url: 'server-script-2.php', //change
+        data: { 'action': 'randomQuestionClicked' },
+        success: function(response) {
+            console.log("AJAX response: ", response);
+        },
+        error: function(xhr, status, error) {
+            console.error("Error in AJAX request: ", status, error);
+        }
+    });
+    alert("AJAX request for Random Question made");
+}
