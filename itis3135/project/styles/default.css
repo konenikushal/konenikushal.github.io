@@ -104,6 +104,11 @@ align-items: flex-start; /* Aligns items to the start */
 display: flex;
 flex-direction: column;
 flex: 1; /* Allows text content to take up available space */
+
+}
+
+.text-content p {
+  text-align: left !important;
 }
 
 #contentContainer1 .inner-content img {
