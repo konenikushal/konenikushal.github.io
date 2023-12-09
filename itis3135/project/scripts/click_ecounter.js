@@ -90,16 +90,16 @@ $.widget("custom.randomQuestionWidget", {
         questions: [],
         renderItem: function(question) {
             return `
-                <div class="question-item">
+                <div class="question-item" style="text-align: center;"> <!-- Center align the entire item -->
                     <div class="question-title">
                         <h3>${question.name}</h3>
                     </div>
                     <div class="question-answer">
-                        <p>${question.answer}</p>
+                        <button class="reveal-answer-button" data-answer="${question.answer}">CLICK TO REVEAL ANSWER</button>
                     </div>
                 </div>
             `;
-        }
+        }        
     },
 
     _create: function() {
@@ -113,6 +113,10 @@ $.widget("custom.randomQuestionWidget", {
                 makeAjaxRequest2();
             }
         });
+
+        // Add click event to reveal answer buttons
+        $(document).on('click', '.reveal-answer-button', this.revealAnswer.bind(this));
+
     },
 
     randomQuestion: function() {
@@ -123,7 +127,13 @@ $.widget("custom.randomQuestionWidget", {
         var question = this.options.questions[randomIndex];
         var questionHTML = this.options.renderItem(question);
         $("#newRandomQuestionContainer").html(questionHTML); // Update this line to target #newRandomQuestionContainer
-    }
+    },
+
+    revealAnswer: function(event) {
+        var answerText = $(event.currentTarget).data('answer');
+        $(event.currentTarget).replaceWith('<p>' + answerText + '</p>');
+    }    
+    
 });
 
 $("#randomQuestionWidget").randomQuestionWidget({
@@ -143,18 +153,5 @@ $("#randomQuestionWidget").randomQuestionWidget({
     ]
 });
 
-function makeAjaxRequest2() {
-    $.ajax({
-        type: 'POST',
-        url: 'https://webpages.charlotte.edu/kkoneni/itis3135/project/scripts/fan_interaction.php',
-        data: { 'action': 'randomQuestionClicked' },
-        success: function(response) {
-            console.log("AJAX response: ", response);
-        },
-        error: function(xhr, status, error) {
-            console.error("Error in AJAX request: ", status, error);
-        }
-    });
-    // Commented out the alert
-    // alert("AJAX request for Random Question made");
-}
+
+

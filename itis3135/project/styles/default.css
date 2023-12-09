@@ -259,7 +259,9 @@ border-right: 2px solid black; /* Keeps the border style as is */
 .column:last-child {
 border-right: none; /* Removes border from the last column */
 }
+
 .container-border {
+text-align: center;
 width: 100%; /* Full width */
 box-sizing: border-box; /* Include padding and border in the box's size */
 border: 2px solid black; /* Border */
@@ -375,3 +377,101 @@ width: 100%; /* Ensures it takes full width */
   background-color: #232323; /* Darker shade on hover for visual feedback */
   box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.3); /* Deeper shadow on hover for a 'pop' effect */
 }
+
+
+.hidden {
+  display: none;
+}
+
+
+.reveal-answer-button {
+  background: none; /* No background */
+  border: none; /* No border */
+  padding: 0 0 16px 0; /* Adding bottom padding */
+  color: rgb(151, 23, 89); /* Inherit color from parent */
+  font-size: inherit; /* Inherit font size from parent */
+  font-family: 'Franklin Gothic', sans-serif;
+  cursor: pointer; /* Cursor changes to pointer */
+  text-decoration: none; /* No underline by default */
+  transition: text-decoration 0.2s ease; /* Smooth transition for text-decoration */
+}
+
+.reveal-answer-button:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+
+
+
+
+
+
+
+
+
+#formIntro {
+  color: #000; /* or any color that is visible against your form's background */
+  text-align: center;
+  margin-bottom: 20px; /* Adds space below the paragraph */
+}
+
+#contactForm {
+  max-width: 300px; /* or the max-width you prefer */
+  margin: auto; /* This centers the form in its parent container */
+}
+
+#contactForm input[type="text"],
+#contactForm input[type="email"] {
+  width: 100%; /* This makes the input fields take up the full width of the form */
+  padding: 10px; /* Adds padding inside the input fields */
+  margin-bottom: 10px; /* Adds space between input fields */
+  box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+}
+
+#contactForm button {
+  width: auto; /* Adjusts the button width according to its content */
+  padding: 10px 15px; /* Adds padding inside the button */
+}
+
+
+#formContainer {
+  text-align: center;
+  margin: 0 auto; /* Center the container */
+  max-width: 300px; /* Adjust the width as needed */
+  padding: 20px; /* Adds padding around the content */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: Adds a subtle shadow */
+  border-radius: 10px; /* Optional: Rounds the corners */
+  background-color: #f2f2f2; /* Adjust background color as needed */
+}
+
+#formContainer p, 
+#formContainer form, 
+#formContainer #thankYouMessage {
+  margin-bottom: 20px; /* Adds space between elements */
+}
+
+#contactForm label, 
+#contactForm input, 
+#contactForm button {
+  display: block; /* Makes each element take a full row */
+  margin-left: auto; /* Centers the block elements */
+  margin-right: auto;
+  width: calc(100% - 40px); /* Adjust width, subtracting the total padding */
+  max-width: 260px; /* Ensures elements do not stretch too wide */
+}
+
+#contactForm input[type="text"],
+#contactForm input[type="email"],
+#contactForm button {
+  padding: 10px; /* Adds padding inside the input fields and button */
+  border-radius: 5px; /* Rounds the corners of input fields and button */
+  border: 2px solid #000;
+}
+
+#contactForm button {
+  background-color: #000000; /* Adds color to the button */
+  color: white; /* Text color for the button */
+  border: none; /* Removes border */
+  cursor: pointer; /* Changes cursor on hover over the button */
+}
+

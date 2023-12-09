@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Featured - Jacob's Music Showcase</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="scripts/featured.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header data-include="components\header.html"></header>
+    <main style="text-align: left; padding-left: 20px;">
+        <h2>Featured</h2>
+        
+        <!-- Column container -->
+        <div class="column-container">
+            <!-- Column 1 -->
+            
+            <div class="column">
+                <div class="content-section">
+                    <h3>From the Start Cover</h3>
+                    <img src="images/yt1.png" alt="Descriptive Alt Text">
+                    <p class="index-para">After the blooming popularity of “From the Start” by Laufey, Jacob wanted to explore the new possibilities of the song through the voice of a synthesizer. Using Vocaloid, a very popular voice synth software, he replicated the notes and lyrics with a new and unique style.</p>
+                </div>
+
+                
+                <button id="lightboxTrigger">CLICK HERE TO EXPERIENCE</button>
+                <div id="lightbox" style="display:none;">
+                    <div id="lightboxContent">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/MhKOxFjF2nI" title="YouTube video…rometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="column">
+                <div class="content-section">
+                    <h3>A self portrait</h3>
+                    <img src="images/art.png" alt="Descriptive Alt Text">
+                    <p class="index-para">helped Jacob discover his love for drawing in pencil for a rugged and homemade look, just like him.</p>
+                </div><!-- Content for column 2 here -->
+            </div>
+        </div>
+
+    </main>
+    <footer data-include="components/footer.html"></footer>
+    <script src="scripts/HTMLInclude.js"></script>
+</body>
+</html>
