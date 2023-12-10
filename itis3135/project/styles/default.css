@@ -1,4 +1,4 @@
-/* */
+/* Basic Styling for Webpage Layout with Centralized Alignment and Color Scheme */
 
 body {
 background-color: rgb(136, 178, 141);
@@ -37,7 +37,13 @@ iframe {
 border: 2px solid #000;
 }
 
-/* */
+main {
+text-align: left;
+padding-left: 20px;
+padding-right: 20px;
+}
+
+/* Comprehensive Styling for Responsive Web Navigation and Layout */
 
 .navbar {
 text-align: center;
@@ -167,6 +173,7 @@ box-sizing: border-box;
 border: 2px solid black;
 margin-bottom: 10px;
 padding: 15px;
+padding-right: 15px;
 }
 
 .top-container {
@@ -234,13 +241,13 @@ transition: text-decoration 0.2s ease;
 text-decoration: underline;
 }
 
-/* */
+/* Link Hover Effects: Underlining on Mouseover */
 
 a:hover {
 text-decoration: underline;
 }
 
-/* */
+/* Interactive UI Elements and Styling for Web Components */
 
 #contentContainer1 .inner-content {
 display: flex;
