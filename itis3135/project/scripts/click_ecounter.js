@@ -1,6 +1,8 @@
+// Custom widget for random song selection
 $.widget("custom.randomSongWidget", {
     options: {
         songs: [],
+        // Function to render each song item
         renderItem: function(song) {
             return `
                 <div class="song-item">
@@ -15,11 +17,14 @@ $.widget("custom.randomSongWidget", {
         }
     },
 
+    // Initialization function for the widget
     _create: function() {
+        // Create and append the random song button
         this.button = $('<button id="randomSongButton">Random Song</button>')
             .appendTo(this.element)
             .button();
 
+        // Event binding for the button click
         this._on(this.button, {
             click: function() {
                 this.randomSong();
@@ -28,6 +33,7 @@ $.widget("custom.randomSongWidget", {
         });
     },
 
+    // Function to select and display a random song
     randomSong: function() {
         if (this.options.songs.length === 0) {
             return;
@@ -39,6 +45,7 @@ $.widget("custom.randomSongWidget", {
     }
 });
 
+// Function to make an AJAX request for random song interaction
 function makeAjaxRequest1() {
     $.ajax({
         type: 'POST',
@@ -51,12 +58,15 @@ function makeAjaxRequest1() {
             console.error("Error in AJAX request: ", status, error);
         }
     });
-    alert("AJAX request for Random Song made");
+    // Commented out the alert
+    // alert("AJAX request for Random Song made");
 }
 
+// Custom widget for random question
 $.widget("custom.randomQuestionWidget", {
     options: {
         questions: [],
+        // Function to render each question item
         renderItem: function(question) {
             return `
                 <div class="question-item" style="text-align: center;">
@@ -71,11 +81,14 @@ $.widget("custom.randomQuestionWidget", {
         }        
     },
 
+    // Initialization function for the widget
     _create: function() {
+        // Create and append the random question button
         this.button = $('<button id="randomQuestionButton">Random Question</button>')
             .appendTo(this.element)
             .button();
 
+        // Event binding for the button click
         this._on(this.button, {
             click: function() {
                 this.randomQuestion();
@@ -83,9 +96,11 @@ $.widget("custom.randomQuestionWidget", {
             }
         });
 
+        // Event binding for revealing the answer
         $(document).on('click', '.reveal-answer-button', this.revealAnswer.bind(this));
     },
 
+    // Function to select and display a random question
     randomQuestion: function() {
         if (this.options.questions.length === 0) {
             return;
@@ -96,27 +111,14 @@ $.widget("custom.randomQuestionWidget", {
         $("#newRandomQuestionContainer").html(questionHTML);
     },
 
+    // Function to reveal the answer of a question
     revealAnswer: function(event) {
         var answerText = $(event.currentTarget).data('answer');
         $(event.currentTarget).replaceWith('<p>' + answerText + '</p>');
     }    
 });
 
-function makeAjaxRequest2() {
-    $.ajax({
-        type: 'POST',
-        url: 'https://webpages.charlotte.edu/kkoneni/itis3135/project/scripts/fan_interaction.php',
-        data: { 'action': 'randomQuestionClicked' },
-        success: function(response) {
-            console.log("AJAX response: ", response);
-        },
-        error: function(xhr, status, error) {
-            console.error("Error in AJAX request: ", status, error);
-        }
-    });
-    alert("AJAX request for Random Question made");
-}
-
+// Initialize the randomSongWidget with a list of songs
 $("#randomSongWidget").randomSongWidget({
     songs: [
         { name: "TIMELESS → CLICK HERE TO EXPERIENCE", url: "https://on.soundcloud.com/vpD1a", photoPath: "images/sc1.png" },
@@ -142,6 +144,7 @@ $("#randomSongWidget").randomSongWidget({
     ]
 });
 
+// Initialize the randomQuestionWidget with a list of questions
 $("#randomQuestionWidget").randomQuestionWidget({
     questions: [
         {
@@ -158,3 +161,20 @@ $("#randomQuestionWidget").randomQuestionWidget({
         }
     ]
 });
+
+// Function to make an AJAX request for random question interaction
+function makeAjaxRequest2() {
+    $.ajax({
+        type: 'POST',
+        url: 'https://webpages.charlotte.edu/kkoneni/itis3135/project/scripts/fan_interaction.php',
+        data: { 'action': 'randomQuestionClicked' },
+        success: function(response) {
+            console.log("AJAX response: ", response);
+        },
+        error: function(xhr, status, error) {
+            console.error("Error in AJAX request: ", status, error);
+        }
+    });
+    // Commented out the alert
+    // alert("AJAX request for Random Question made");
+}
