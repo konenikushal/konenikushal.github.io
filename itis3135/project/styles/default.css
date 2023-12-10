@@ -1,72 +1,73 @@
+/* */
+
 body {
-  background-color: rgb(136, 178, 141);
-
-  font-family: 'Franklin Gothic', sans-serif;
-}
-
-.navbar {
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar li {
-  display: inline;
-}
-
-.navbar a {
-  display: inline-block;
-  margin: 5px;
-  padding: 8px;
-  background-color: #f2f2f2;
-  color: rgb(151, 23, 89);
-  text-decoration: none;
-  border: 3px solid #000000;
-  border-radius: 10px;
-}
-
-.navbar a:hover {
-  background-color: #ddd;
+background-color: rgb(136, 178, 141);
+font-family: 'Franklin Gothic', sans-serif;
 }
 
 header {
-  text-align: center;
+text-align: center;
 }
 
 footer {
-  text-align: center;
+text-align: center;
 }
 
 a {
-  color: white;
-  text-decoration: none;
+color: white;
+text-decoration: none;
 }
 
-
-
 h1 {
-  color: rgb(151, 23, 89);
-  text-align: center;
+color: rgb(151, 23, 89);
+text-align: center;
 }
 
 h2 {
-  text-align: center;
-}
-
-a:hover {
-  text-decoration: underline;
+text-align: center;
 }
 
 hr {
-  border: none;
-  height: 5px;
-  background-color: rgb(151, 23, 89);
+border: none;
+height: 5px;
+background-color: rgb(151, 23, 89);
+}
+
+iframe {
+border: 2px solid #000;
+}
+
+/* */
+
+.navbar {
+text-align: center;
+margin: 0;
+padding: 0;
+}
+
+.navbar ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+
+.navbar li {
+display: inline;
+}
+
+.navbar a {
+display: inline-block;
+margin: 5px;
+padding: 8px;
+background-color: #f2f2f2;
+color: rgb(151, 23, 89);
+text-decoration: none;
+border: 3px solid #000000;
+border-radius: 10px;
+}
+
+.navbar a:hover {
+background-color: #ddd;
 }
 
 .container {
@@ -80,61 +81,39 @@ margin-bottom: 10px;
 display: flex;
 justify-content: space-between;
 align-items: center;
-width: 100%; /* Ensures it spans the full width */
+width: 100%;
 }
 
 .inner-content h3 {
 text-align: left;
-flex: 1; /* Allows it to grow if needed, ensures it stays on the left */
+flex: 1;
 }
 
 .inner-content img {
-width: auto; /* Adjust as needed */
-max-width: 50%; /* Prevents the image from getting too large */
-flex: 1; /* Allows it to grow if needed, ensures it stays on the right */
-}
-
-#contentContainer1 .inner-content {
-display: flex;
-justify-content: space-between;
-align-items: flex-start; /* Aligns items to the start */
-}
-
-#contentContainer1 .inner-content .text-content {
-display: flex;
-flex-direction: column;
-flex: 1; /* Allows text content to take up available space */
-
-}
-
-.text-content p {
-  text-align: left !important;
-}
-
-#contentContainer1 .inner-content img {
 width: auto;
 max-width: 50%;
 flex: 1;
-padding-left: 20px; /* Adds padding to the left of the image */
 }
 
+.text-content p {
+text-align: left !important;
+}
 
 .content-container img {
-  width: 100%; /* Ensure each element takes the full width */
-  display: block; /* Makes each element stack vertically */
-  text-align: center; /* Centers the text and the image */
-  margin-bottom: 10px; /* Adds some space below each element */
+width: 100%;
+display: block;
+text-align: center;
+margin-bottom: 10px;
 }
 
-
 .index-para {
-text-align: justify; /* Justifies the text of the paragraph */
+text-align: justify;
 padding-left: 100px;
 padding-right: 100px;
 }
 
 .journey-para {
-text-align: justify; /* Justifies the text of the paragraph */
+text-align: justify;
 padding-top: 150px;
 padding-left: 50px;
 padding-right: 50px;
@@ -146,6 +125,140 @@ display: flex;
 justify-content: center;
 align-items: center;
 text-align: center;
+}
+
+.toggle-button {
+background-color: transparent;
+color: #fff;
+border: none;
+cursor: pointer;
+}
+
+.paragraph {
+display: none;
+}
+
+.active {
+display: block;
+}
+
+.column-container {
+display: flex;
+gap: 20px;
+}
+
+.column {
+flex: 1;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: flex-start;
+border-right: 2px solid black;
+}
+
+.column:last-child {
+border-right: none;
+}
+
+.container-border {
+text-align: center;
+width: 100%;
+box-sizing: border-box;
+border: 2px solid black;
+margin-bottom: 10px;
+padding: 15px;
+}
+
+.top-container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.content-container {
+width: 100%;
+}
+
+.song-item {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px 0;
+width: 100%;
+}
+
+.song-title {
+flex: 1;
+text-align: left;
+margin-right: 10px;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+
+.song-image {
+flex-shrink: 1;
+flex-basis: 50%;
+}
+
+.song-item img {
+width: 100%;
+height: auto;
+object-fit: cover;
+}
+
+.inner-widget-container {
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+flex-grow: 1;
+}
+
+.hidden {
+display: none;
+}
+
+.reveal-answer-button {
+background: none;
+border: none;
+padding: 0 0 16px 0;
+color: rgb(151, 23, 89);
+font-size: inherit;
+font-family: 'Franklin Gothic', sans-serif;
+cursor: pointer;
+text-decoration: none;
+transition: text-decoration 0.2s ease;
+}
+
+.reveal-answer-button:hover {
+text-decoration: underline;
+}
+
+/* */
+
+a:hover {
+text-decoration: underline;
+}
+
+/* */
+
+#contentContainer1 .inner-content {
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+}
+
+#contentContainer1 .inner-content .text-content {
+display: flex;
+flex-direction: column;
+flex: 1;
+}
+
+#contentContainer1 .inner-content img {
+width: auto;
+max-width: 50%;
+flex: 1;
+padding-left: 20px;
 }
 
 #lightbox {
@@ -166,317 +279,145 @@ padding: 20px;
 border-radius: 5px;
 }
 
-
-
-
 #lightboxTrigger {
-font-size: 24px; /* Increase font size for better visibility */
-padding: 20px 40px; /* Increase padding for a larger button */
-background-color: rgb(136, 178, 141); /* Chrome-like color */
-color: white; /* Change text color to black */
-border: 6px solid #232323; /* Chrome-like border */
-border-radius: 10px; /* Rounded corners */
-cursor: pointer; /* Cursor change on hover */
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Add a shadow for a 3D effect */
-transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+font-size: 24px;
+padding: 20px 40px;
+background-color: rgb(136, 178, 141);
+color: white;
+border: 6px solid #232323;
+border-radius: 10px;
+cursor: pointer;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+transition: all 0.3s ease-in-out;
 }
 
 #lightboxTrigger:hover {
-background-color: #232323; /* Slightly darker shade for hover effect */
-box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.3); /* Increased shadow on hover for a popping effect */
+background-color: #232323;
+box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.3);
 }
-
-iframe {
-border: 2px solid #000; /* Example: 2px solid black border */
-}
-
-
-
-
-
 
 #randomSongButton {
-    font-size: 24px; /* Increased font size for better visibility */
-    padding: 20px 40px; /* Increased padding for a larger button */
-    background-color: rgb(136, 178, 141); /* Chrome-like color */
-    color: white; /* Text color set to white */
-    border: 6px solid #232323; /* Chrome-like border */
-    border-radius: 10px; /* Rounded corners for the button */
-    cursor: pointer; /* Cursor changes to pointer to indicate a clickable button */
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Shadow for a subtle 3D effect */
-    transition: all 0.3s ease-in-out; /* Transition for smooth hover effect */
+font-size: 24px;
+padding: 20px 40px;
+background-color: rgb(136, 178, 141);
+color: white;
+border: 6px solid #232323;
+border-radius: 10px;
+cursor: pointer;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+transition: all 0.3s ease-in-out;
 }
 
 #randomSongButton:hover {
-    background-color: #232323; /* Darker shade on hover for visual feedback */
-    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.3); /* Deeper shadow on hover for a 'pop' effect */
+background-color: #232323;
+box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.3);
 }
-
-
 
 #randomSongLink {
 font-size: 18px;
 margin-top: 10px;
 display: block;
 }
+
 #songImage {
 max-width: 100%;
 height: auto;
 margin-top: 15px;
 }
 
-.toggle-button {
-background-color: transparent; /* Set background to transparent */
-color: #fff;                   /* Text color */
-border: none;                  /* No border */
-cursor: pointer;               /* Cursor changes to pointer on hover */
-}
-
-.paragraph {
-display: none;
-}
-
-.active {
-display: block;
-}
-
-
-
-
-
-
-
-
-.column-container {
+#randomSongWidget {
 display: flex;
-gap: 20px; /* This creates space between columns */
-}
-
-.column {
-flex: 1;
-display: flex;
-flex-direction: column; /* Align items vertically */
-align-items: center; /* Center items horizontally */
-justify-content: flex-start; /* Align items to the start of the column vertically */
-border-right: 2px solid black; /* Keeps the border style as is */
-}
-
-.column:last-child {
-border-right: none; /* Removes border from the last column */
-}
-
-.container-border {
-text-align: center;
-width: 100%; /* Full width */
-box-sizing: border-box; /* Include padding and border in the box's size */
-border: 2px solid black; /* Border */
-margin-bottom: 10px; /* Space below the container */
-padding: 15px; /* Padding between content and border */
-}
-
-.top-container {
-display: flex;
-justify-content: space-between;
+justify-content: center;
 align-items: center;
 }
 
-.content-container {
-/* Styles for your expandable content */
-width: 100%; /* Ensures it takes full width */
-/* If additional padding is needed inside this container, you can add it here */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.song-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 0; /* Add padding as needed */
-  width: 100%; /* Ensure the song item takes the full width */
-}
-
-.song-title {
-  flex: 1; /* Ensures the title takes up the available space */
-  text-align: left; /* Aligns the text to the left */
-  margin-right: 10px; /* Adds space between the text and the image */
-  white-space: nowrap; /* Keeps the text on one line */
-  overflow: hidden; /* Ensures that the overflow text does not break the layout */
-  text-overflow: ellipsis; /* Adds an ellipsis to text that overflows */
-}
-
-.song-image {
-  flex-shrink: 1; /* Allows the image to shrink */
-  flex-basis: 50%; /* Gives an initial width to the image container */
-}
-
-.song-item img {
-  width: 100%; /* Makes the image responsive within its container */
-  height: auto; /* Maintains the aspect ratio */
-  object-fit: cover; /* Keeps the aspect ratio of the image */
-}
-
-
-
-
-.inner-widget-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end; /* Aligns items to the end of the container */
-  flex-grow: 1; /* Allows container to grow as needed */
-}
-
-#randomSongWidget {
-  display: flex;
-  justify-content: center; /* This will center the children of the widget horizontally */
-  align-items: center; /* This will center the children of the widget vertically */
-}
-
 #newRandomSongContainer {
-  width: 100%; /* Full width to match the widget width */
-  margin-top: 10px; /* Space between the widget and new content */
+width: 100%;
+margin-top: 10px;
 }
-
-
-
-
 
 #randomQuestionWidget {
-  display: flex;
-  justify-content: center; /* This will center the children of the widget horizontally */
-  align-items: center; /* This will center the children of the widget vertically */
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 #newRandomQuestionContainer {
-  width: 100%; /* Full width to match the widget width */
-  margin-top: 10px; /* Space between the widget and new content */
+width: 100%;
+margin-top: 10px;
 }
 
-
 #randomQuestionButton {
-  font-size: 24px; /* Increased font size for better visibility */
-  padding: 20px 40px; /* Increased padding for a larger button */
-  background-color: rgb(136, 178, 141); /* Chrome-like color */
-  color: white; /* Text color set to white */
-  border: 6px solid #232323; /* Chrome-like border */
-  border-radius: 10px; /* Rounded corners for the button */
-  cursor: pointer; /* Cursor changes to pointer to indicate a clickable button */
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Shadow for a subtle 3D effect */
-  transition: all 0.3s ease-in-out; /* Transition for smooth hover effect */
+font-size: 24px;
+padding: 20px 40px;
+background-color: rgb(136, 178, 141);
+color: white;
+border: 6px solid #232323;
+border-radius: 10px;
+cursor: pointer;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+transition: all 0.3s ease-in-out;
 }
 
 #randomQuestionButton:hover {
-  background-color: #232323; /* Darker shade on hover for visual feedback */
-  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.3); /* Deeper shadow on hover for a 'pop' effect */
+background-color: #232323;
+box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.3);
 }
-
-
-.hidden {
-  display: none;
-}
-
-
-.reveal-answer-button {
-  background: none; /* No background */
-  border: none; /* No border */
-  padding: 0 0 16px 0; /* Adding bottom padding */
-  color: rgb(151, 23, 89); /* Inherit color from parent */
-  font-size: inherit; /* Inherit font size from parent */
-  font-family: 'Franklin Gothic', sans-serif;
-  cursor: pointer; /* Cursor changes to pointer */
-  text-decoration: none; /* No underline by default */
-  transition: text-decoration 0.2s ease; /* Smooth transition for text-decoration */
-}
-
-.reveal-answer-button:hover {
-  text-decoration: underline; /* Underline on hover */
-}
-
-
-
-
-
-
-
-
-
 
 #formIntro {
-  color: #000; /* or any color that is visible against your form's background */
-  text-align: center;
-  margin-bottom: 20px; /* Adds space below the paragraph */
+color: #000;
+text-align: center;
+margin-bottom: 20px;
 }
 
 #contactForm {
-  max-width: 300px; /* or the max-width you prefer */
-  margin: auto; /* This centers the form in its parent container */
+max-width: 300px;
+margin: auto;
 }
 
-#contactForm input[type="text"],
-#contactForm input[type="email"] {
-  width: 100%; /* This makes the input fields take up the full width of the form */
-  padding: 10px; /* Adds padding inside the input fields */
-  margin-bottom: 10px; /* Adds space between input fields */
-  box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+#contactForm input[type="text"], #contactForm input[type="email"] {
+width: 100%;
+padding: 10px;
+margin-bottom: 10px;
+box-sizing: border-box;
 }
 
 #contactForm button {
-  width: auto; /* Adjusts the button width according to its content */
-  padding: 10px 15px; /* Adds padding inside the button */
+width: auto;
+padding: 10px 15px;
 }
-
 
 #formContainer {
-  text-align: center;
-  margin: 0 auto; /* Center the container */
-  max-width: 300px; /* Adjust the width as needed */
-  padding: 20px; /* Adds padding around the content */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: Adds a subtle shadow */
-  border-radius: 10px; /* Optional: Rounds the corners */
-  background-color: #f2f2f2; /* Adjust background color as needed */
+text-align: center;
+margin: 0 auto;
+max-width: 300px;
+padding: 20px;
+box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+border-radius: 10px;
+background-color: #f2f2f2;
 }
 
-#formContainer p, 
-#formContainer form, 
-#formContainer #thankYouMessage {
-  margin-bottom: 20px; /* Adds space between elements */
+#formContainer p, #formContainer form, #formContainer #thankYouMessage {
+margin-bottom: 20px;
 }
 
-#contactForm label, 
-#contactForm input, 
-#contactForm button {
-  display: block; /* Makes each element take a full row */
-  margin-left: auto; /* Centers the block elements */
-  margin-right: auto;
-  width: calc(100% - 40px); /* Adjust width, subtracting the total padding */
-  max-width: 260px; /* Ensures elements do not stretch too wide */
+#contactForm label, #contactForm input, #contactForm button {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: calc(100% - 40px);
+max-width: 260px;
 }
 
-#contactForm input[type="text"],
-#contactForm input[type="email"],
-#contactForm button {
-  padding: 10px; /* Adds padding inside the input fields and button */
-  border-radius: 5px; /* Rounds the corners of input fields and button */
-  border: 2px solid #000;
+#contactForm input[type="text"], #contactForm input[type="email"], #contactForm button {
+padding: 10px;
+border-radius: 5px;
+border: 2px solid #000;
 }
 
 #contactForm button {
-  background-color: #000000; /* Adds color to the button */
-  color: white; /* Text color for the button */
-  border: none; /* Removes border */
-  cursor: pointer; /* Changes cursor on hover over the button */
+background-color: #000000;
+color: white;
+border: none;
+cursor: pointer;
 }
-

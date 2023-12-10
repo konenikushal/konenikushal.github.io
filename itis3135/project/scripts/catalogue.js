@@ -47,10 +47,10 @@ function toggleImage1(button) {
     var img = button.getElementsByTagName('img')[0];
     if (img.src.endsWith('plus.png')) {
         img.src = 'images/minus.png';
-        toggleParagraph(1); // Collapsing the paragraph
+        toggleParagraph(1);
     } else {
         img.src = 'images/plus.png';
-        toggleParagraph(1); // Expanding the paragraph
+        toggleParagraph(1);
     }
 }
 
@@ -58,9 +58,9 @@ function toggleImage2(button) {
     var img = button.getElementsByTagName('img')[0];
     if (img.src.endsWith('plus.png')) {
         img.src = 'images/minus.png';
-        toggleParagraph(2); // Collapsing the paragraph
+        toggleParagraph(2);
     } else {
         img.src = 'images/plus.png';
-        toggleParagraph(2); // Expanding the paragraph
+        toggleParagraph(2);
     }
 }
